@@ -1,10 +1,13 @@
-def linear_search(object, array)
+def global_linear_search(object, array)
+	index_array = []
 	i = 0
 	while i < array.length
-		return i if array[i] == object
+		index_array << i if array[i] == object
 		i += 1
 	end
+	index_array
 end
 
-random_numbers = [ 6, 29, 18, 2, 72, 19, 18, 10, 37 ]
-p linear_search(18, random_numbers)
+bananas_arr = "bananas".split(//)
+# => ["b", "a", "n", "a", "n", "a", "s"]
+p global_linear_search("a", bananas_arr)
