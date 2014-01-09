@@ -1,6 +1,8 @@
 def linear_search(num, dict)
-  for index in dict
+  index = 0
+  while index < dict.length
     return index if dict[index] == num
+    index += 1
   end
   nil
 end
@@ -12,3 +14,4 @@ p linear_search(18, random_numbers)
 # => 2
 p linear_search(9, random_numbers)
 # => nil
+
