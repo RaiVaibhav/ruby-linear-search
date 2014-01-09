@@ -19,11 +19,19 @@ def linear_search(object, array)
 end
 
 
+def global_linear_search(object, array)
+  match = []
+  for i in (0..array.length)
+    if array[i] == object
+      match.push(i)
+    end
+  end
+  match
+end
 
 
 
-
-random_stuff = [ 6, 29, 18, 2, 72, 19, 18, 10, 37, "test", "dog", "cat" ]
+random_stuff = [ 6, 29, 18, 2, 72, 19, 18, 10, 37, "test", "dog", "cat", 37, 37, 35, 37 ]
 p linear_search(18, random_stuff)==2
 
 p linear_search(9, random_stuff)==nil
@@ -31,3 +39,14 @@ p linear_search("dog", random_stuff)==10
 p linear_search("kitchen sink", random_stuff)==nil
 p linear_search("blue", random_stuff)==nil
 p linear_search(37, random_stuff)==8
+
+
+
+
+p global_linear_search(18, random_stuff)==[2,6]
+
+p global_linear_search(9, random_stuff)==[]
+p global_linear_search("dog", random_stuff)==[10]
+p global_linear_search("kitchen sink", random_stuff)==[]
+p global_linear_search("blue", random_stuff)==[]
+p global_linear_search(37, random_stuff)==[8, 12, 13, 15]
