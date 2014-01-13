@@ -6,10 +6,29 @@
 
 
 # release 0
-def linear_search(object, array)
+# def linear_search(object, array)
+#   array.index { |number| number == object}	
+# end
 
-  array.index { |number| number == object}	
+# random_numbers = [6, 29, 18, 2, 72, 19, 18, 10, 37]
+# p linear_search(18, random_numbers) == 2 
+# p linear_search(9, random_numbers) == nil
+
+#release 0 for realz
+
+def linear_search(object, array)
+  index = 0 
+   while index < array.length
+	   for i in array
+	   	 if i == object
+	  	   return index
+	     end
+	   index += 1 
+	  end
+	nil
+	end
 end
+
 
 random_numbers = [6, 29, 18, 2, 72, 19, 18, 10, 37]
 p linear_search(18, random_numbers) == 2 
